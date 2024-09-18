@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+.new-amsterdam-regular {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* corpo */
+body {
+  width: 100%;
+  height: 100%;
+  background: #f9d6d6; /* cor de fundo */
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(0, 0, 0, 0.2); /* cor da linha de fundo */
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
+ 
+
+
+
+
+/*HEADER*/
+/* Estilo do menu de navegação */
+nav {
+    background-color: #000000; /* cor da barra do menu */
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px 0px #fcfcfc33;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+/* Estilo do menu lá em cima */
+nav ul li a {
+    color: #edb6c4; /* cor das letras */
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav ul li a:hover {
+    color: rgb(120, 117, 117); /* cor quando passa o mouse */
+}
+
+/* Estilo do dropdown (menu lá em cima) */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #696767; /* cor das sub barras */
+    box-shadow: 0px 8px 16px 0px rgba(240, 223, 223, 0.2);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+/* From Uiverse.io by Praashoo7 */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #000000;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    max-width: 600px;
+    margin: 20vh auto;
+    font-size: 18px;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: "New Amsterdam";
+  }
+  
+  .form a img{
+    width: 15%;
+    margin-top: 20px;
+    border-radius: 100px;
+    border: 0px;
+  }
+  
+  form:hover {
+    gap: 20px;
+    transform: scale(1.02);
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  /* Estilo do Titulo */
+  #heading {
+    text-align: center;
+    margin: 0.6em;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-family: "New Amsterdam";
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Estilo das caixinhas */
+  .field {
+    font-size: 18px;
+  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    border-radius: 25px;
+    padding: 0.4em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0); /* cor dos titulos */
+    background-color: #ffffff; /* cor da caixinha */
+    box-shadow: inset 2px 5px 10px rgb(244, 199, 199); /* cor da borda da caixinha, da sombra */
+    padding: 10px;
+    font-family: "New Amsterdam";  
+  }
+  
+/* digitação */
+  textarea {
+    padding: 10px;
+    gap: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #181717; /* cor de quando digita */
+    font-family: "New Amsterdam";
+    font-size: 16px;
+  }
+  
+/* Data */
+  input{
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    width: 70%;
+    color: #4c4848; /* cor da data */
+    font-family: "New Amsterdam";
+    font-size: 16px;
+  }
+
+  /* Estilo do "selecionar responsavel" */
+  select{
+    background: none;
+    border: none;
+    outline: none;
+    width: 40%;
+    color: #e83092;
+    font-size: 14px;
+    font-family: "New Amsterdam";
+
+  }
+
+  /* Estilo do "adicionar responsavel" */
+.field a{
+ 
+    color: #f4018f;
+    font-size: 14px;
+    text-emphasis:var(--color);
+    font-style: italic;
+}
+
+/* cor da sub caixas de seleção */
+option{
+    background-color: #fcf5f5;
+    font-family: "New Amsterdam";
+}
+
+/* Estilo do "SALVAR" */
+.button3 {
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #1A1A1A; /* cor da linha em volta do bloco */
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #000000; /* cor da escita */
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: auto;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+ }
+ 
+ .button3:disabled {
+  pointer-events: none;
+ }
+ 
+ .button3:hover {
+  color: #fff; /* cor da escrita quando passa o mouse */
+  background-color: #1A1A1A; /* cor para quando passa o mouse */
+  box-shadow: rgba(6, 6, 6, 0.25) 0 8px 15px; /* brilho de fundo */
+  transform: translateY(-2px);
+ }
+ 
+ .button3:active {
+  box-shadow: none;
+  transform: translateY(0);
+ }
+
+
+/* Estilo dos icones */
+  .input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: #1a1818;
+  }
+  
+/* Estilo dos icones */
+  .input-field {
+    font-family: "New Amsterdam";
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #1a1717;
+  }
